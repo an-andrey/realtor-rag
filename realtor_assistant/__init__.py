@@ -1,0 +1,2 @@
+"""Landono realtor assistant package."""
+

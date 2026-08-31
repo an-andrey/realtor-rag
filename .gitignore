@@ -4,6 +4,13 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .pdm-python
+.env
+.env.*
+!.env.example
 
 #database files
 db/*.db
+db/*.db-journal
+db/*.db-shm
+db/*.db-wal
+db/chroma/

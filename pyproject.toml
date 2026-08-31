@@ -5,7 +5,17 @@ description = "Default template for PDM package"
 authors = [
     {name = "Andrey Ambartsumov",email = "an.ambartsumov@gmail.com"},
 ]
-dependencies = ["beautifulsoup4>=4.15.0", "selenium>=4.46.0"]
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "selenium>=4.46.0",
+    "chromadb>=1.5.9",
+    "sentence-transformers>=5.6.1",
+    "langchain>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +23,8 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[tool.pdm.scripts]
+assistant = "python -m realtor_assistant.cli"
+geocode = "python -m realtor_assistant.geo"
+update-chroma = "python -m realtor_assistant.vectorstore"
